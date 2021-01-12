@@ -4,7 +4,9 @@ tags:
   - Git
   - 工具
   - 笔记搬运计划
-banner_img: ./git笔记/git-logo.jpg
+banner_img: /assets/img/post_cover/git-logo.jpg
+index_img: /assets/img/post_cover/git-logo.jpg
+
 date: 2020-10-11 16:34:02
 ---
 
