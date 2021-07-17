@@ -42,6 +42,11 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
       
+      - name: Init Git Env
+        run: |
+          git config --global user.email "luyanfcp@foxmail.com"
+          git config --global user.name "luyanfcp"
+
       - name: Build And Deploy
         run: |
           npx hexo clean
