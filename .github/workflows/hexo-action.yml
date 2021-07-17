@@ -1,0 +1,50 @@
+name: Hexo Blog Build and Upgrade
+on: 
+  push:
+    branches: ['main']
+  pull_request:
+    branches: ['main'] 
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    
+    steps:
+      
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Env Node Init
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      
+      # Cache
+      - name: Cache Node.js modules
+        uses: actions/cache@v2
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: ~/.npm
+          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-node-
+            ${{ runner.OS }}-
+
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Set Up Env
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        run: |
+          sudo timedatectl set-timezone "Asia/Shanghai"
+          mkdir -p ~/.ssh
+          echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+      
+      - name: Build And Deploy
+        run: |
+          hexo clean
+          hexo generate
+          hexo deploy
+          
