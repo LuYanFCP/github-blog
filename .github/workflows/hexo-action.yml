@@ -44,8 +44,12 @@ jobs:
       
       - name: Init Git Env
         run: |
-          git config --global user.email "luyanfcp@foxmail.com"
           git config --global user.name "luyanfcp"
+          git config --global user.email "luyanfcp@foxmail.com"
+          echo "test user.name"
+          git config --global user.name
+          echo "test user.email"
+          git config --global user.email
 
       - name: Build And Deploy
         run: |
