@@ -6,3 +6,7 @@ node_modules/
 public/
 .deploy*/
 .deploy_git
+
+# develop key 
+hexo-deploy-key
+hexo-deploy-key.pub
