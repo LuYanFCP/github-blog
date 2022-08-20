@@ -1,9 +1,9 @@
 name: Hexo Blog Build and Upgrade
 on: 
   push:
-    branches: ['main']
+    branches: ['release']
   pull_request:
-    branches: ['main'] 
+    branches: ['release'] 
 jobs:
   build:
     runs-on: ubuntu-18.04
