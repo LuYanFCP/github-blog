@@ -38,11 +38,6 @@ render_drafts: false
 post_asset_folder: true
 relative_link: false
 future: true
-highlight:
-  enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace: ''
   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -73,7 +68,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: fluid
+theme: fluid   # flexblock
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
