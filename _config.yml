@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: luyanfcp的博客
+title: OxNullPath Blog
 subtitle: 勿以往之不谏，知来者知可追
-description: 现为北京邮电大学研究生一枚
-keywords: C/C++、Python、Java、准程序员、开源
+description: No mountain too high, no ocean too deep.
+keywords: C/C++、Python、Java.
 author: luyanfcp
 email: luyanfcp@foxmail.com
 language: zh-CN
@@ -68,7 +68,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: fluid   # flexblock
+theme: minima # flexblock
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -97,3 +97,18 @@ jsonContent:
     excerpt: false
     categories: false
     tags: true
+
+syntax_highlighter: prismjs
+
+highlight:
+  enable: false #set it to false
+  line_number: false
+  auto_detect: false
+  tab_replace: ''
+  wrap: false #false
+  hljs: false
+prismjs:
+  enable: true #set it to true
+  preprocess: true
+  line_number: true #optional
+  tab_replace: ''

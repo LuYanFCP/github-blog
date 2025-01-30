@@ -53,7 +53,6 @@ jobs:
 
       - name: Build And Deploy
         run: |
-          npx hexo clean
-          npx hexo generate
+          ./build.sh
           npx hexo deploy
           
