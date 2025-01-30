@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: luyanfcp的博客
+title: OxNullPath Blog
 subtitle: 勿以往之不谏，知来者知可追
-description: 现为北京邮电大学研究生一枚
-keywords: C/C++、Python、Java、准程序员、开源
+description: No mountain too high, no ocean too deep.
+keywords: C/C++、Python、Java.
 author: luyanfcp
 email: luyanfcp@foxmail.com
 language: zh-CN
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: //luyanfcp.github.io
+url: https://blog.whickylucky.top
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -38,11 +38,6 @@ render_drafts: false
 post_asset_folder: true
 relative_link: false
 future: true
-highlight:
-  enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace: ''
   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -73,7 +68,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: fluid
+theme: minima # flexblock
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -102,3 +97,18 @@ jsonContent:
     excerpt: false
     categories: false
     tags: true
+
+syntax_highlighter: prismjs
+
+highlight:
+  enable: false #set it to false
+  line_number: false
+  auto_detect: false
+  tab_replace: ''
+  wrap: false #false
+  hljs: false
+prismjs:
+  enable: true #set it to true
+  preprocess: true
+  line_number: true #optional
+  tab_replace: ''
